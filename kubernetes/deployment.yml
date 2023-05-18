@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: java-webapp1
-          image: shafi14/java-app:${{ github.run_number }}
+          image: shafi14/javaappaksdeploy:${{ github.run_number }}
 
           ports: 
             - containerPort: 8080
