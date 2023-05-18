@@ -9,7 +9,7 @@ jobs:
   build: 
     uses: ./.github/workflows/CI-java-build-package-maven.yml
     secrets: inherit
-  deploy-dev:
+  deploy-QA:
     runs-on: ubuntu-latest
     env:
       DOCKER_HUB_USERNAME: shafi14 # name of Docker Hub ID
