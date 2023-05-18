@@ -3,13 +3,13 @@ on:
   workflow_dispatch:
   push:
     branches:
-    - 'develop'
+    - 'main'
 
 jobs:
   build: 
     uses: ./.github/workflows/CI-java-build-package-maven.yml
     secrets: inherit
-  deploy-dev:
+  deploy-main:
     runs-on: ubuntu-latest
     env:
       DOCKER_HUB_USERNAME: shafi14 # name of Docker Hub ID
@@ -19,7 +19,7 @@ jobs:
       CLUSTER_NAME: shafi-aks-test2
       RESOURSE_GROUP: shafi-rg2
     needs: [build]
-    environment: dev
+    environment: main
     steps:
       - name: Display the path
         run: pwd
