@@ -9,7 +9,12 @@
 name: Java CI build and package using maven
 
 on:
-  workflow_call:
+  #workflow_call:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+  
 jobs:
   build:
  
