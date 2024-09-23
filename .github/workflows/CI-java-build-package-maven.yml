@@ -65,4 +65,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: shafi14/javaappaksdeploy:${{ github.run_number }}
+        tags: shafi14/javaappmyaksdeploy:${{ github.run_number }}
